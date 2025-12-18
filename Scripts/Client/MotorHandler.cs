@@ -148,7 +148,8 @@ public class MotorHandler : MonoBehaviour
                 animator.Play("Running Left Down");
             }
         }
-        
+
+        // Makes the sprite look at the camera's position at all times
         sprite.transform.LookAt(currentCamera.transform.position);
     }
 
