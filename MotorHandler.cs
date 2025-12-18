@@ -89,23 +89,6 @@ public class MotorHandler : MonoBehaviour
         { "CheckForWall", new RayBool("CheckForWall", false) }
     };
 
-    // Function responsible for detecting a wall behind the player.
-    // /(This was used to let the camera know if it could hide the wall the player would be standing behind of)
-    public void CheckForWall()
-    {
-        RaycastHit hit;
-        float dist = 8f;
-
-        if (Physics.Raycast(CheckWallObject.transform.position, -transform.forward, out hit, dist, wallLayer))
-        {
-            raycasts["CheckForWall"].value = true;
-        }
-        else
-        {
-            raycasts["CheckForWall"].value = false;
-        }
-    }
-
     // Function responsible for managing sprite animation based on the direction of the player
     void SpriteManager()
     {
@@ -330,7 +313,6 @@ public class MotorHandler : MonoBehaviour
         if (currentState == States.CanMove)
         {
             MovementManager();
-            CheckForWall();
             SpriteManager();
         }
         else
