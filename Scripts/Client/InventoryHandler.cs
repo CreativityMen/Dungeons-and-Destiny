@@ -1,6 +1,11 @@
 /*
-
-*/
+    Title: InventoryHandler.cs
+    Author: Afonso Marques
+    
+    Description: Main script responsible for handling
+    the inventory system whenever an item gets picked
+    up, equipped, switched, etc.
+ */
 
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
